@@ -36,7 +36,6 @@ const AppContext = ({ children }) => {
 			params: {
 				q: bookName,
 				orderBy: "relevance",
-				maxResults: 6,
 			},
 		});
 		const { items } = await booksQuery.data;
@@ -49,7 +48,6 @@ const AppContext = ({ children }) => {
 			params: {
 				q: bookName,
 				orderBy: "relevance",
-				maxResults: 10,
 			},
 		});
 		const { items } = await booksQuery.data;
@@ -87,7 +85,6 @@ const AppContext = ({ children }) => {
 	const displayExtendedInfo = (idx) => {
 		const currentSelectedBook = topBooks[idx];
 		setCurrentExtendedInfo((prevoiusInfo) => currentSelectedBook);
-		console.log(currentExtendedInfo);
 	};
 
 	// Setting Current Book to Display in Larger Section from More Book:
