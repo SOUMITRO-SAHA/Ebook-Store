@@ -36,7 +36,7 @@ const AppContext = ({ children }) => {
 			params: {
 				q: bookName,
 				orderBy: "relevance",
-				maxResults: 5,
+				maxResults: 6,
 			},
 		});
 		const { items } = await booksQuery.data;
@@ -49,7 +49,7 @@ const AppContext = ({ children }) => {
 			params: {
 				q: bookName,
 				orderBy: "relevance",
-				maxResults: 5,
+				maxResults: 10,
 			},
 		});
 		const { items } = await booksQuery.data;

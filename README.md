@@ -2,7 +2,7 @@
 
 Welcome to the Ebook Store, a clone of Google Books, where you can explore and discover a vast collection of ebooks. This web application is built using modern web technologies and aims to provide a user-friendly experience for book enthusiasts to browse, search, and find their favorite ebooks.
 
-## Deployed Link: [keazonbooks](https://keazonbooks.netlify.app/)
+### Deployed Link: [keazonbooks](https://keazonbooks.netlify.app/)
 
 ## Tech Stack
 
