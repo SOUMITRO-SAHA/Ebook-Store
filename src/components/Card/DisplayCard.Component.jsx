@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { useAppContext } from "../../Context/AppContext.Context";
 
 const DisplayCard = ({ book, idx }) => {
+	const [counter, setCounter] = useState(1);
+
 	const {
 		setShouldExtendeInfo,
 		shouldExtendeInfo,
@@ -26,12 +29,22 @@ const DisplayCard = ({ book, idx }) => {
 	const readMoreHandler = () => {
 		setShouldExtendeInfo(!shouldExtendeInfo);
 		displayExtendedInfo(idx);
+		increaseCounter();
+	};
+
+	const increaseCounter = () => {
+		if (counter === 3) {
+			setCounter(1);
+		} else {
+			setCounter(counter + 1);
+		}
+		return counter;
 	};
 
 	const ExtendedBookInfo = (
 		<div
 			key={id}
-			className={`w-[100%] h-[300px] bg-color${idx + 1} z-10 flex gap-6`}
+			className={`w-[100%] h-[300px] bg-color${counter} z-10 flex gap-6`}
 		>
 			{/* Image */}
 			<img

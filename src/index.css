@@ -5,9 +5,19 @@
 :root {
 	--primary-color: #292828;
 	--secondary-color: #242121;
-	--color1: #71c5f4;
-	--color2: #ab71f4;
-	--color3: #f471a8;
+	--bg1: rgba(113, 197, 244, 0.38);
+	--bg2: rgba(171, 113, 244, 0.38);
+	--bg3: rgba(244, 113, 168, 0.38);
+}
+
+.bg-color1 {
+	background: var(--bg1);
+}
+.bg-color2 {
+	background: var(--bg2);
+}
+.bg-color3 {
+	background: var(--bg3);
 }
 
 html,

@@ -2,6 +2,8 @@
 
 Welcome to the Ebook Store, a clone of Google Books, where you can explore and discover a vast collection of ebooks. This web application is built using modern web technologies and aims to provide a user-friendly experience for book enthusiasts to browse, search, and find their favorite ebooks.
 
+## Deployed Link: [Ebook Store]()
+
 ## Tech Stack
 
 The Ebook Store is developed using the following technologies:
