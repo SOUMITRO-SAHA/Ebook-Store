@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useAppContext } from "./Context/AppContext.Context";
+import MainBody from "./components/Body/MainBody";
+import Navbar from "./components/Navbar/Navbar.Component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const { setIsMobile } = useAppContext();
+	//choose the screen size
+	const handleResize = () => {
+		if (window.innerWidth < 1024) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+
+	// create an event listener
+	useEffect(() => {
+		window.addEventListener("resize", handleResize);
+	});
+	return (
+		<main>
+			<Navbar />
+			<MainBody />
+			<ToastContainer />
+		</main>
+	);
+};
 
 export default App;
